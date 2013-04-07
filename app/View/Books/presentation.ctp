@@ -70,9 +70,9 @@
         <?php
         foreach($chapterArray as $page){
         ?>
-            <li><a href="/anna/book_1/ch<?=$chapter?>/<?=$page?>.jpg"
+            <li><a href="/book_1/ch<?=$chapter?>/<?=$page?>.jpg"
                title="Marketing Essential">
-                <img src="/anna/book_1/ch<?=$chapter?>/<?=$page?>.jpg" width="72" height="72" alt="" /> </a>
+                <img src="/book_1/ch<?=$chapter?>/<?=$page?>.jpg" width="72" height="72" alt="" /> </a>
         </li>
 
         <?
