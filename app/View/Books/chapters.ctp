@@ -3,7 +3,7 @@
 foreach($chapters as $chapter){
 ?>
 
-    <a href="/anna/books/presentation/<?=$chapter[1]?>">Chapter <?=$chapter[1]?> --- <?=$chapter[0]?> </a> <br />
+    <a href="/books/presentation/<?=$chapter[1]?>">Chapter <?=$chapter[1]?> --- <?=$chapter[0]?> </a> <br />
 <?php
 }
 ?>
