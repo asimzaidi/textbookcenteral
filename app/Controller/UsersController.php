@@ -12,6 +12,9 @@ class UsersController extends AppController {
  *
  * @return void
  */
+ public function beforeFilter() {
+    parent::beforeFilter();
+}
 	public function index() {
 		$this->User->recursive = 0;
 		$this->set('users', $this->paginate());
@@ -94,4 +97,16 @@ class UsersController extends AppController {
 		$this->Session->setFlash(__('User was not deleted'));
 		$this->redirect(array('action' => 'index'));
 	}
-}
+    public function login() {
+    if ($this->request->is('post')) {
+        if ($this->Auth->login($this->request->data)) {
+            $this->redirect($this->Auth->redirect());
+        }else {
+            $this->Session->setFlash(__('Invalid username or password, try again'));
+            }
+        }
+    }
+    public function logout() {
+     $this->redirect($this->Auth->logout());
+        }
+    }

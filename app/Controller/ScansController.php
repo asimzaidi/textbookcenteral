@@ -24,6 +24,9 @@ class ScansController extends AppController {
  * @param string $id
  * @return void
  */
+  public function beforeFilter() {
+    parent::beforeFilter();
+}
 	public function view($id = null) {
 		if (!$this->Scan->exists($id)) {
 			throw new NotFoundException(__('Invalid scan'));

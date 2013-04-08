@@ -12,10 +12,14 @@ class BooksController extends AppController {
  *
  * @return void
  */
-	public function index() {
-		$this->Book->recursive = 0;
-		$this->set('books', $this->paginate());
-	}
+ public function index() {
+        $this->Book->recursive = 0;
+        $this->set('books', $this->paginate());
+    }
+ public function beforeFilter() {
+    $this->Auth->autoRedirect = false;
+    parent::beforeFilter();
+}
 
 /**
  * view method
